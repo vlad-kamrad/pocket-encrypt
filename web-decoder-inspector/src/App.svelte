@@ -57,7 +57,7 @@
           name="password"
           bind:value={password}
           placeholder="Password"
-          autocomplete="new-password"
+          autocomplete="current-password"
         />
 
         <input
