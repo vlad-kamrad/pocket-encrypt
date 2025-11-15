@@ -71,9 +71,11 @@ export async function encodeCommand(params) {
         ? params.inputPath
         : getDirectoryName(params.inputPath);
 
-    const outputFilename = params.uniqueFilename
+    const outputBaseFilename = params.uniqueFilename
       ? crypto.randomUUID()
       : entry.filename;
+
+    const outputFilename = `${outputBaseFilename}.enc`;
 
     if (params.generateMetadata) {
       metadataOutputMap.push({
@@ -85,10 +87,7 @@ export async function encodeCommand(params) {
       });
     }
 
-    await fs.writeFile(
-      joinPaths(outputPath, `${outputFilename}.enc`),
-      encodedBuffer
-    );
+    await fs.writeFile(joinPaths(outputPath, outputFilename), encodedBuffer);
   }
 
   if (params.generateMetadata) {

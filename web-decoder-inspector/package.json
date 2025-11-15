@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@picocss/pico": "^2.1.1",
+    "runed": "^0.36.0",
     "svelte-sonner": "^1.0.6"
   }
 }

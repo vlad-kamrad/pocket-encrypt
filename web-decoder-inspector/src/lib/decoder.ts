@@ -9,9 +9,11 @@ type AddPayload = {
   mime: string | null;
 };
 
-export async function decodeFile(params: { file: File; password: string }) {
-  const buffer = await params.file.arrayBuffer();
-  const bytes = new Uint8Array(buffer);
+export async function decodeBuffer(params: {
+  buffer: ArrayBuffer;
+  password: string;
+}) {
+  const bytes = new Uint8Array(params.buffer);
 
   // parse: salt(16) | iv(12) | aadLength(2) | aad | ciphertext | tag(16)
   let offset = 0;
@@ -68,6 +70,12 @@ export async function decodeFile(params: { file: File; password: string }) {
     category: fileCategory,
     ...aadPayload,
   };
+}
+
+export async function decodeFile(params: { file: File; password: string }) {
+  const buffer = await params.file.arrayBuffer();
+
+  return await decodeBuffer({ buffer, password: params.password });
 }
 
 function concatUint8Arrays(a: ArrayLike<number>, b: ArrayLike<number>) {
