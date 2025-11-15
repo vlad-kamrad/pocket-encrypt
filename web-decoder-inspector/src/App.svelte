@@ -44,6 +44,7 @@
 <Toaster position="top-center" />
 <header>
   <h1>Web Decoder</h1>
+  <a href="https://github.com/vlad-kamrad/pocket-encrypt">source code</a>
 </header>
 <main>
   <section>
@@ -77,6 +78,11 @@
 <footer>All right reserved</footer>
 
 <style lang="scss">
+  header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
   .preview-section {
     display: flex;
     flex-direction: column;
