@@ -1,0 +1,44 @@
+[
+  {
+    "id": "6b8440ba-081e-488a-89f6-49fe326bd402.enc",
+    "filename": "test-audio.mp3",
+    "mime": "audio/mpeg",
+    "ext": "mp3",
+    "size": 5685080
+  },
+  {
+    "id": "e22e9aea-ef40-4162-af55-0208806d9baa.enc",
+    "filename": "test-document.pdf",
+    "mime": "application/pdf",
+    "ext": "pdf",
+    "size": 23110611
+  },
+  {
+    "id": "3e384c0b-f7aa-40ab-9f1d-830093ab7297.enc",
+    "filename": "test-image-1.jpeg",
+    "mime": "image/jpeg",
+    "ext": "jpg",
+    "size": 7324
+  },
+  {
+    "id": "9e70b6b9-36ed-4576-a35b-42933ca5a1bb.enc",
+    "filename": "test-text-1.json",
+    "mime": null,
+    "ext": null,
+    "size": 92
+  },
+  {
+    "id": "5c57a459-d39f-4f04-93dd-b29dace6fb32.enc",
+    "filename": "test-text-2.md",
+    "mime": null,
+    "ext": null,
+    "size": 33
+  },
+  {
+    "id": "e79cbb08-375b-4506-b4d2-bb56399d96ea.enc",
+    "filename": "test-video-1.mp4",
+    "mime": "video/mp4",
+    "ext": "mp4",
+    "size": 10101738
+  }
+]
